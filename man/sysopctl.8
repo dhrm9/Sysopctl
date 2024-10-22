@@ -1,0 +1,76 @@
+.TH SYSOPCTL 8 "October 2024" "v0.1.0" "System Operations Control"
+.SH NAME
+sysopctl \- System operations management command
+.SH SYNOPSIS
+.B sysopctl
+[\fIcommand\fR] [\fIoptions\fR]
+.SH DESCRIPTION
+sysopctl is a powerful command-line tool designed for system administrators to efficiently manage and monitor system resources, services, and overall system health. It provides a user-friendly interface for controlling services, checking performance metrics, and performing routine maintenance tasks to ensure optimal system operation.
+
+.SH COMMANDS
+.TP
+\fBsysopctl service list\fR
+List all active system services along with their current statuses, allowing administrators to quickly assess which services are running.
+
+.TP
+\fBsysopctl service start <service-name>\fR
+Start a specified service by name. This command can be used to initiate any service that is currently stopped.
+
+.TP
+\fBsysopctl service stop <service-name>\fR
+Stop a specified service by name. This is useful for halting services that are no longer needed or for performing maintenance.
+
+.TP
+\fBsysopctl system load\fR
+Display the current system load averages over 1, 5, and 15 minutes, helping to identify performance bottlenecks.
+
+.TP
+\fBsysopctl disk usage\fR
+Show disk usage statistics by partition, including total, used, and available space, facilitating storage management.
+
+.TP
+\fBsysopctl process monitor\fR
+Monitor real-time process activity, providing insights into CPU and memory usage, and allowing administrators to identify resource-intensive processes.
+
+.TP
+\fBsysopctl logs analyze\fR
+Analyze recent critical system log entries to help diagnose issues and maintain system integrity. This command can be used to filter logs based on severity.
+
+.TP
+\fBsysopctl backup <path>\fR
+Backup files from the specified path to a designated backup location, ensuring data safety and recovery options.
+
+.SH OPTIONS
+.TP
+\fB--help\fR, \fB-h\fR
+Show help message and usage instructions.
+
+.TP
+\fB--version\fR, \fB-v\fR
+Show the version of sysopctl.
+
+.SH EXAMPLES
+.TP
+List all running services:
+.B
+sysopctl service list
+.TP
+Start the Apache service:
+.B
+sysopctl service start apache2
+.TP
+Check system load averages:
+.B
+sysopctl system load
+.TP
+Monitor system processes:
+.B
+sysopctl process monitor
+.TP
+Backup user documents:
+.B
+sysopctl backup /home/user/documents
+
+.SH AUTHOR
+Written by Dharmendra Singh
+
